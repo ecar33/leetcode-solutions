@@ -1,4 +1,6 @@
 import sys
+from string_profiler import profile_function, plot_runtimes
+import matplotlib.pyplot as plt
 
 def lengthOfLongestSubstring(s: str) -> int:
     if len(s) == 0:
@@ -38,3 +40,9 @@ if __name__ == "__main__":
         print("Length of the longest substring without repeating characters:", lengthOfLongestSubstring(input_string))
     else:
         print("Please provide a string as an argument.")
+    
+
+    # To profile
+    # results = profile_function(lengthOfLongestSubstring, 1000)    
+    # plot_runtimes(results, fitDegree=1, title='Runtime of optimized_solution')
+    # plt.show()  

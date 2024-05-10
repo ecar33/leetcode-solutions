@@ -1,4 +1,6 @@
-import sys
+# import sys
+from string_profiler import profile_function, plot_runtimes
+import matplotlib.pyplot as plt
 
 def has_repeats(s):
     """ Check if the given substring has repeating characters. """
@@ -29,3 +31,10 @@ if __name__ == "__main__":
         print("Length of the longest substring without repeating characters:", lengthOfLongestSubstringNaive(input_string))
     else:
         print("Please provide a string as an argument.")
+    
+    # To profile
+    # results = profile_function(lengthOfLongestSubstringNaive, 100)    
+    # plot_runtimes(results, fitDegree=1, title='Runtime of naive_solution')
+    # plt.show()  
+    
+    

@@ -11,7 +11,20 @@ This repository contains Python scripts to find the longest substring without re
 ## Requirements
 - Python 3.x
 
+## Setup and Installation
+
+Before running the scripts, ensure that your Python environment is set up correctly. This repository requires Python 3.x and some additional modules that are listed in the `requirements.txt` file.
+
+### Installing Python Modules
+
+To install the required Python modules, run the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## How to Run the Scripts
+
 
 ### Running the Optimized Solution
 To run the optimized solution using the sliding window technique, execute the following command in your terminal:
