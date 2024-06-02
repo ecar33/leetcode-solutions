@@ -14,7 +14,6 @@ def intToRoman(num: int) -> str:
     900:    'CM',
    1000:    'M'
     }
-    r_digits = []
     result = ''
     
     thousands_digit = int(num / 1000 % 10)

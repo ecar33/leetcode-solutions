@@ -28,6 +28,6 @@ def longest_substring(s, k):
     return len(s)
 
 # Example usage
-input_string = "aaabbccddeee"
+input_string = "aaab"
 k_value = 3
 print(f"The length of the longest substring where each character appears at least {k_value} times is: {longest_substring(input_string, k_value)}")

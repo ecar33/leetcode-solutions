@@ -14,10 +14,12 @@ class Solution:
             word_count = Counter(word)
             # Check if the word can be formed with the available letters
             if all(available_letters[c] >= word_count[c] for c in word_count):
+                # Create a new counter to update available letters
                 new_available_letters = available_letters.copy()
+                # Decrement the count of letters used in the current word
                 for char in word:
                     new_available_letters[char] -= 1
-                # Recurse with this word included
+                # Recurse with this word included in the score
                 backtrack(index + 1, current_score + word_score, new_available_letters)
             # Recurse without including this word
             backtrack(index + 1, current_score, available_letters)
@@ -42,10 +44,10 @@ class Solution:
         backtrack(0, 0, available_letters)
         return max_score
 
-
+# Example usage
 s = Solution()
-words = ["xxxz","ax","bx","cx"] 
-letters = ["z","a","b","c","x","x","x"]
-score = [4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,10]
+words = ["xxxz", "ax", "bx", "cx"]
+letters = ["z", "a", "b", "c", "x", "x", "x"]
+score = [4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 10]
 
-print(s.maxScoreWords(words, letters, score))
+print(s.maxScoreWords(words, letters, score))  # Expected output should reflect the maximum score
